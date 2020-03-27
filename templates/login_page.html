@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="{{url_for('static', filename='css/login.css')}}">
+</head>
+
+<body>
+    <h1>Login</h1>
+<form method="POST" action="">
+   
+    <div class="imgcont">
+    <img src="static/img/login_img1.png" alt="Avatar">
+    
+    </div>
+
+    <div class="container">
+        <label for="uname"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="uname" value = '{{request.form.uname}}' required>
+
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" value = '{{request.form.psw}}' required>
+            
+        <button type="submit" value="Login">Login</button>
+        <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+        </label>
+        <br>
+        <br>
+        <a>New User?</a>
+        <a class="reg" href="{{url_for('register')}}">Register Here!</a>    
+    </div>
+
+    {% if error %}
+    <p class="alert alert-danger" role="alert"><strong>Error:</strong> {{ error }}
+    {% endif %}
+
+</form>
+</body>
+</html>

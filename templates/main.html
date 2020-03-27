@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+</head>
+<title>
+kanban
+</title>
+<div>
+    <form action="/logout" style="text-align:end;">
+        <h4>Kanban Board</h4>
+        <input type="submit" name="logout" value="Logout">
+    </form>
+    {% if current_user.is_authenticated %}
+    <h2>Hi {{ current_user.uname }}!</h2>
+    {% endif %}
+</div>
+
+
+<div class="row">
+
+    <div class="column" style="background-color:#fefbd8;">
+        <h2>To Do</h2>
+        <form action="/doing" method="POST">
+            {% for todo in todolst %}
+            <ul>
+                <li>{{todo.task}}</li>
+                <input type='submit' name = '{{todo.id}}' value='DOING'>
+            </ul>
+            {% endfor %}
+        </form>
+    </div>
+
+    <div class="column" style="background-color:#80ced6;">
+        <h2>In Process</h2>
+        <form action='/done' method="POST">
+            {% for doing in doinglst %} 
+            <ul>
+                <li>{{doing.task}}</li>
+                <input type='submit' name = '{{doing.id}}' value='DONE'>
+            </ul>
+            {% endfor %}
+        </form>
+    </div>
+
+    <div class="column" style="background-color:#d5f4e6;"">
+        <h2>Done</h2>
+        <form action='/delete' method='POST'>
+            {% for done in donelst %}
+            <ul>
+                <li>{{done.task}}</li>
+                <input type="submit" name="{{done.id}}" value='DELETE'>
+            </ul>
+            {% endfor %}
+        </form>
+    </div>
+
+</div>
+
+<br>
+
+<div>
+    <h2> New Task </h2>
+     <form style="text-align: center;" action="/add" method="POST">
+        <input type="text" name="tasktodo" placeholder="Enter Task">
+        <button class="button" type="submit">
+            Submit
+        </button>
+     </form>
+</div>
+
+</html>

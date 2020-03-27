@@ -1,0 +1,141 @@
+    * {
+      box-sizing: border-box;
+    }
+    
+    form {border: 3px solid #f1f1f1;}
+
+    body {
+      color: rgb(77, 76, 76);
+      margin: 0;
+      padding: 0;
+      
+    }
+
+    input[type=text], input[type=password] {
+      width: 200px;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+      width: 100px;
+    }
+    
+    button:hover {
+      opacity: 0.8;
+    }
+
+    input[type=submit] {
+      background-color: red;
+      color: white;
+      padding: 10px 10px;
+      border: none;
+      cursor: pointer;
+      width: 80px;
+      height: auto;
+      display: inline-block;
+    }
+
+    input[type=button] {
+      background-color: red;
+      color: white;
+      padding: 10px 10px;
+      border: none;
+      cursor: pointer;
+      width: 80px;
+      height: auto;
+      display: inline-block;
+    }
+    
+    input[type=submit]:hover {
+      opacity: 0.5;
+    }
+
+    .textbox{
+      width: 380px;
+      position: absolute;
+      top: 35%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      background:rgba(2, 3, 4, 0.2);
+    }
+
+    .input-box{
+      width: 100%;
+      overflow: hidden;
+      font-size: 20px;
+      padding: 10px 0;
+      margin: 50px 0;
+      border-bottom: 6px solid;
+    }
+
+    .input-box input{
+      width: 100%;
+      border: none;
+      color: bisque;
+      outline: none;
+      background: darkslategrey;
+      align-self: center;
+    }
+
+    ::placeholder{
+      text-align: center;
+    }
+    h1{
+      color: darkslategrey;
+      font-family: Arial;
+      border-bottom: #4CAF50;
+      text-align: center;
+    }
+
+    h4{
+      color: darkslategrey;
+      font-family: Arial;
+      border-bottom: #4CAF50;
+      display:inline-block;
+      text-align: center;
+    }
+
+    h2 {
+      text-align: center;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    
+    /* Create three equal columns that floats next to each other */
+    .column {
+      float: left;
+      width: 33%;
+      padding: 10px;
+      height: 100%; /* Should be removed. Only for demonstration */
+    }
+    
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    label {
+      -webkit-appearance: button;
+      -moz-appearance: button;
+      appearance: button;
+      padding: 1px 6px;
+    }
+    
+    li {
+      width: 250px;
+      font-family: Arial;
+     }
+   
+   
+
+   
